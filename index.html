@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memory Match</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="bar">
+      <h1>🧠 Memory Match</h1>
+      <div class="controls">
+        <div class="group">
+          <label>Grid</label>
+          <button class="pill active" data-size="4x4">4×4</button>
+          <button class="pill" data-size="6x4">6×4</button>
+        </div>
+        <div class="group">
+          <label>Theme</label>
+          <button class="pill active" data-theme="emoji">Emoji</button>
+          <button class="pill" data-theme="shapes">Shapes</button>
+        </div>
+        <button id="restart" class="accent">Restart</button>
+      </div>
+    </header>
+
+    <section class="stats panel">
+      <div class="stat"><div class="label">Moves</div><div id="moves" class="value">0</div></div>
+      <div class="stat"><div class="label">Time</div><div id="time" class="value">00:00</div></div>
+      <div class="stat"><div class="label">Best</div><div id="best" class="value">—</div></div>
+    </section>
+
+    <main class="board panel">
+      <div id="grid" class="grid"></div>
+    </main>
+
+    <footer class="tips panel">
+      <p>Tip: Flip two matching cards to clear them. Finish with fewer moves and faster time!</p>
+    </footer>
+  </div>
+
+  <div id="win" class="modal hidden">
+    <div class="modal-card">
+      <h2>🎉 You Win!</h2>
+      <p id="summary">Great job!</p>
+      <div class="modal-actions">
+        <button id="again" class="accent">Play Again</button>
+        <button id="close" class="ghost">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
